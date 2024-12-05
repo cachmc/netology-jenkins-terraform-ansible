@@ -1,8 +1,11 @@
 ---
   - name: Install Java
+    gather_facts: false
     hosts: all
+    
     pre_tasks:
       - name: Wait for host to become reachable
         wait_for_connection:
+    
     roles:
       - java
